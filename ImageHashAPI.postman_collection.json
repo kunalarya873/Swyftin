@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "dbb0c9e3-524c-4444-81e3-64ac21b440a6",
+		"name": "ImageHashAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32614538"
+	},
+	"item": [
+		{
+			"name": "set image_url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"image_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/800px-Java_programming_language_logo.svg.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/calculate-hash/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"calculate-hash",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All imageHashes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/image-hashes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"image-hashes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ImageHashes by ID Viewing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/image-hashes/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"image-hashes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ImageHashes by ID Updating",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"image_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/80px-Java_programming_language_logo.svg.png\",\n  \"md5_hash\": \"86c651f99cba442fd79a13fecadf57c5\",\n        \"phash\": \"991b707623a372cd\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/image-hashes/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"image-hashes",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ImageHashes by ID Deleting",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"image_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/80px-Java_programming_language_logo.svg.png\",\n  \"md5_hash\": \"86c651f99cba442fd79a13fecadf57c5\",\n        \"phash\": \"991b707623a372cd\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/image-hashes/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"image-hashes",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
