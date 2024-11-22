@@ -55,7 +55,7 @@ Setup
     
     `git clone https://github.com/kunalarya873/Swyftin`
     
-    `cd imageshashapi` 
+    `cd imagehashapi` 
     
 3.  **Install dependencies**:
     
